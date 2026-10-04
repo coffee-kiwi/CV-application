@@ -1,9 +1,7 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 import GeneralInformation from './components/GeneralInformation.jsx';
+import Education from './components/Education.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +9,7 @@ function App() {
   return (
     <>
       <GeneralInformation />
+      <Education />
 
       {/* <section id="center">
         <div className="hero">
