@@ -25,6 +25,7 @@ export default function WorkExperience () {
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
     const [isFinalized, setIsFinalized] = useState(false);
+    const [isCurrent, setIsCurrent] = useState(false);
 
     if (isFinalized) {
         return (
@@ -33,8 +34,7 @@ export default function WorkExperience () {
                 <h2>Position: {positionTitle}</h2>
                 <h2>Position Details:</h2> 
                 <p>{positionDetails}</p>
-                <h2>Start Date: {startDate}</h2>
-                <h2>Until: {endDate}</h2>
+                <h2>{isCurrent ? startDate + " -- Current" : startDate + " -- " + endDate}</h2>
                 <br/>
                 <button 
                     type="button"
@@ -73,6 +73,37 @@ export default function WorkExperience () {
                     name="positionDetails"
                     id="positionDetails"
                 />
+                <br/>
+                <InputText 
+                    label="Start Date"
+                    value={startDate}
+                    onChange={setStartDate}
+                    type="month"
+                    name="startDate"
+                    id="startDate"
+                />
+                <br/>
+                <label>
+                    <input
+                        type="checkbox"
+                        checked={isCurrent}
+                        onChange={(e) => setIsCurrent(e.target.checked)}
+                    />
+                    {' '}
+                    Current
+                </label>
+                
+                <br/>
+                { !isCurrent && 
+                    <InputText 
+                        label="Until"
+                        value={endDate}
+                        onChange={setEndDate}
+                        type="month"
+                        name="endDate"
+                        id="endDate"
+                    />
+                }
                 <br/>
                 <button 
                     type="button"
