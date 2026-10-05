@@ -1,5 +1,30 @@
 import { useState } from 'react';
 import InputText from './InputText.jsx';
+    
+function SelectField({ label, value, onChange, id, options, ...rest}) {
+    return (
+        <>
+            <label htmlFor={id}>
+                {label} 
+            </label>
+            {' '}
+            <select 
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
+                id={id}
+                {...rest}
+            >
+            {
+                options.map((option) => {
+                    return <option key={option.value} value={option.value}>
+                             {option.label}
+                            </option>
+                })
+            }
+            </select>
+        </>
+    )
+}
 
 export default function Education () {
     const [university, setUniversity] = useState('');
@@ -7,25 +32,7 @@ export default function Education () {
     const [graduationStatus, setGraduationStatus] = useState('graduated');
     const [graduationDate, setGraduationDate] = useState('');
 
-    function GraduationStatus({ value, onChange}) {
-        return (
-            <>
-                <label htmlFor="graduationStatus">
-                    Graduation Status 
-                </label>
-                {' '}
-                <select 
-                    name="graduationStatus" 
-                    id="graduationStatus"
-                    value={value}
-                    onChange={(e) => onChange(e.target.value)}
-                >
-                    <option value="graduated">Graduated</option>
-                    <option value="expected">Expected Graduation</option>
-                </select>
-            </>
-        )
-    }
+
     
     return (
         <div className="card">
@@ -47,9 +54,16 @@ export default function Education () {
                 id="fieldOfStudy"
             />
             <br/>
-            <GraduationStatus
+            <SelectField
+                label="Graduation Status"
                 value={graduationStatus}
                 onChange={setGraduationStatus}
+                options = {[
+                            { value: "graduated", label: "Graduated" },
+                            { value: "expected", label: "Expected Graduation" }
+                ]}
+                name="graduationStatus" 
+                id="graduationStatus"
             />
             <br/>
             <InputText 
