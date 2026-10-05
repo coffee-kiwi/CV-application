@@ -50,56 +50,56 @@ export default function Education () {
             </div>
         );
     } else {
-    return (
-        <div className="card">
-            <InputText 
-                label="University"
-                value={university}
-                onChange={setUniversity}
-                placeholder="The University of Auckland"
-                name="university"
-                id="university"
-            />
-            <br/>
-            <InputText 
-                label="Field Of Study"
-                value={fieldOfStudy}
-                onChange={setFieldOfStudy}
-                placeholder="Engineering"
-                name="fieldOfStudy"
-                id="fieldOfStudy"
-            />
-            <br/>
-            <SelectField
-                label="Graduation Status"
-                value={graduationStatus}
-                onChange={setGraduationStatus}
-                options = {[
-                            { value: "graduated", label: "Graduated" },
-                            { value: "expected", label: "Expected Graduation" }
-                ]}
-                name="graduationStatus" 
-                id="graduationStatus"
-            />
-            <br/>
-            <InputText 
-                label="Graduation Date"
-                value={graduationDate}
-                onChange={setGraduationDate}
-                type="month"
-                placeholder="2016-05"
-                name="graduationDate"
-                id="graduationDate"
-            />
-            <br/>
-            <button 
-                type="button"
-                onClick={() => setIsFinalized(true)}
-            >   
-                Finalize
-            </button>
-        </div>
+        return (
+            <div className="card">
+                <InputText 
+                    label="University"
+                    value={university}
+                    onChange={setUniversity}
+                    placeholder="The University of Auckland"
+                    name="university"
+                    id="university"
+                />
+                <br/>
+                <InputText 
+                    label="Field Of Study"
+                    value={fieldOfStudy}
+                    onChange={setFieldOfStudy}
+                    placeholder="Engineering"
+                    name="fieldOfStudy"
+                    id="fieldOfStudy"
+                />
+                <br/>
+                <SelectField
+                    label="Graduation Status"
+                    value={graduationStatus}
+                    onChange={setGraduationStatus}
+                    options = {[
+                                { value: "graduated", label: "Graduated" },
+                                { value: "expected", label: "Expected Graduation" }
+                    ]}
+                    name="graduationStatus" 
+                    id="graduationStatus"
+                />
+                <br/>
+                <InputText 
+                    label="Graduation Date"
+                    value={graduationDate}
+                    onChange={setGraduationDate}
+                    type="month"
+                    placeholder="2016-05"
+                    name="graduationDate"
+                    id="graduationDate"
+                />
+                <br/>
+                <button 
+                    type="button"
+                    onClick={() => setIsFinalized(true)}
+                >   
+                    Finalize
+                </button>
+            </div>
 
-    );
+        );
     }
 }
