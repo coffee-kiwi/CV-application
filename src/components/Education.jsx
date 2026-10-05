@@ -91,7 +91,7 @@ export default function Education () {
                 name="graduationDate"
                 id="graduationDate"
             />
-
+            <br/>
             <button 
                 type="button"
                 onClick={() => setIsFinalized(true)}
