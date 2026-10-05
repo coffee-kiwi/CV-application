@@ -9,7 +9,10 @@ function App() {
   return (
     <>
       <GeneralInformation />
+      <hr/>
       <Education />
+      <hr/>
+      
 
       {/* <section id="center">
         <div className="hero">

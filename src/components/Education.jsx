@@ -4,7 +4,28 @@ import InputText from './InputText.jsx';
 export default function Education () {
     const [university, setUniversity] = useState('');
     const [fieldOfStudy, setFieldOfStudy] = useState('');
+    const [graduationStatus, setGraduationStatus] = useState('graduated');
     const [graduationDate, setGraduationDate] = useState('');
+
+    function GraduationStatus({ value, onChange}) {
+        return (
+            <>
+                <label htmlFor="graduationStatus">
+                    Graduation Status
+                </label>
+
+                <select 
+                    name="graduationStatus" 
+                    id="graduationStatus"
+                    value={value}
+                    onChange={(e) => onChange(e.target.value)}
+                >
+                    <option value="graduated">Graduated</option>
+                    <option value="expected">Expected Graduation</option>
+                </select>
+            </>
+        )
+    }
     
     return (
         <div className="card">
@@ -24,6 +45,11 @@ export default function Education () {
                 placeholder="Engineering"
                 name="fieldOfStudy"
                 id="fieldOfStudy"
+            />
+            <br/>
+            <GraduationStatus
+                value={graduationStatus}
+                onChange={setGraduationStatus}
             />
             <br/>
             <InputText 

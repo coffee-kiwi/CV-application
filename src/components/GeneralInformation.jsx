@@ -15,7 +15,7 @@ export default function GeneralInformation () {
                 placeholder="John Paul"
                 name="name"
                 id="name"
-                autocomplete="name"
+                autoComplete="name"
             />
             <br/>
             <InputText 
@@ -26,7 +26,7 @@ export default function GeneralInformation () {
                 placeholder="myemail@example.com"
                 name="email"
                 id="email"
-                autocomplete="email"
+                autoComplete="email"
             />
             <br/>
             <InputText 
@@ -37,7 +37,7 @@ export default function GeneralInformation () {
                 placeholder="123-4566-7899"
                 name="phone"
                 id="phone"
-                autocomplete="phone"
+                autoComplete="phone"
             />
 
         </div>   
