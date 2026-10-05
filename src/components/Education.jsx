@@ -11,9 +11,9 @@ export default function Education () {
         return (
             <>
                 <label htmlFor="graduationStatus">
-                    Graduation Status
+                    Graduation Status 
                 </label>
-
+                {' '}
                 <select 
                     name="graduationStatus" 
                     id="graduationStatus"

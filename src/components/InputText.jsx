@@ -6,7 +6,7 @@ export default function Input ({ label, value, onChange, type = "text", id, ...r
     return (
         <label htmlFor={id}>
             {label}
-            {': '}
+            {' '}
             <input  
                 type={type}
                 value={value}
