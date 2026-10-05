@@ -38,7 +38,7 @@ export default function Education () {
             <div className="card">
                 <h2>University: {university}</h2>
                 <h2>Field of Study: {fieldOfStudy}</h2>
-                <h2>Graduation Status: {graduationStatus}</h2>
+                <h2>Graduation Status: {graduationStatus === "graduated" ? "Graduated" : "Expected Graduation" }</h2>
                 <h2>Graduation Date: {graduationDate}</h2>
                 <br/>
                 <button 
@@ -75,8 +75,8 @@ export default function Education () {
                 value={graduationStatus}
                 onChange={setGraduationStatus}
                 options = {[
-                            { value: "Graduated", label: "Graduated" },
-                            { value: "Expected Graduation", label: "Expected Graduation" }
+                            { value: "graduated", label: "Graduated" },
+                            { value: "expected", label: "Expected Graduation" }
                 ]}
                 name="graduationStatus" 
                 id="graduationStatus"
