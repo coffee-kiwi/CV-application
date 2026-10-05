@@ -31,9 +31,25 @@ export default function Education () {
     const [fieldOfStudy, setFieldOfStudy] = useState('');
     const [graduationStatus, setGraduationStatus] = useState('graduated');
     const [graduationDate, setGraduationDate] = useState('');
+    const [isFinalized, setIsFinalized] = useState(false);
 
-
-    
+    if (isFinalized) {
+        return (
+            <div className="card">
+                <h2>University: {university}</h2>
+                <h2>Field of Study: {fieldOfStudy}</h2>
+                <h2>Graduation Status: {graduationStatus}</h2>
+                <h2>Graduation Date: {graduationDate}</h2>
+                <br/>
+                <button 
+                    type="button"
+                    onClick={() => setIsFinalized(false)}
+                >   
+                    Edit
+                </button>
+            </div>
+        );
+    } else {
     return (
         <div className="card">
             <InputText 
@@ -59,8 +75,8 @@ export default function Education () {
                 value={graduationStatus}
                 onChange={setGraduationStatus}
                 options = {[
-                            { value: "graduated", label: "Graduated" },
-                            { value: "expected", label: "Expected Graduation" }
+                            { value: "Graduated", label: "Graduated" },
+                            { value: "Expected Graduation", label: "Expected Graduation" }
                 ]}
                 name="graduationStatus" 
                 id="graduationStatus"
@@ -76,6 +92,14 @@ export default function Education () {
                 id="graduationDate"
             />
 
-        </div>   
+            <button 
+                type="button"
+                onClick={() => setIsFinalized(true)}
+            >   
+                Finalize
+            </button>
+        </div>
+
     );
+    }
 }
