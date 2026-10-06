@@ -29,7 +29,8 @@ export default function WorkExperience () {
 
     if (isFinalized) {
         return (
-            <div className="card">
+            <div className="card workExp">
+                <h1>Work Experience</h1>
                 <h2>Company: {companyName}</h2>
                 <h2>Position: {positionTitle}</h2>
                 <h2>Position Details:</h2> 
@@ -46,7 +47,8 @@ export default function WorkExperience () {
         );
     } else {
         return (
-            <div className="card">
+            <div className="card workExp">
+                <h1>Work Experience</h1>
                 <InputText 
                     label="Company Name"
                     value={companyName}
@@ -54,6 +56,7 @@ export default function WorkExperience () {
                     placeholder="XYZ Ltd."
                     name="companyName"
                     id="companyName"
+                    className="inputField" 
                 />
                 <br/>
                 <InputText 
@@ -63,6 +66,7 @@ export default function WorkExperience () {
                     placeholder="Engineer"
                     name="positionTitle"
                     id="positionTitle"
+                    className="inputField" 
                 />
                 <br/>
                 <TextArea
@@ -72,6 +76,7 @@ export default function WorkExperience () {
                     placeholder="Designed project with reference to stakeholder needs"
                     name="positionDetails"
                     id="positionDetails"
+                    className="inputField textArea" 
                 />
                 <br/>
                 <InputText 
@@ -81,6 +86,7 @@ export default function WorkExperience () {
                     type="month"
                     name="startDate"
                     id="startDate"
+                    className="inputField" 
                 />
                 <br/>
                 <label>
@@ -102,6 +108,7 @@ export default function WorkExperience () {
                         type="month"
                         name="endDate"
                         id="endDate"
+                        className="inputField" 
                     />
                 }
                 <br/>

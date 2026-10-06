@@ -9,7 +9,8 @@ export default function GeneralInformation () {
     
     if (isFinalized) {
         return (
-            <div className="card">
+            <div className="card genInfo">
+            <h1>General Information</h1>
             <h2>Name: {name}</h2>
             <h2>Email: {email}</h2>
             <h2>Phone: {phone}</h2>
@@ -24,7 +25,8 @@ export default function GeneralInformation () {
         );
     } else {
         return (
-            <div className="card">
+            <div className="card genInfo">
+                <h1>General Information</h1>
                 <InputText 
                     label="Name"
                     value={name}
@@ -33,6 +35,7 @@ export default function GeneralInformation () {
                     name="name"
                     id="name"
                     autoComplete="name"
+                    className="inputField" 
                 />
                 <br/>
                 <InputText 
@@ -44,6 +47,7 @@ export default function GeneralInformation () {
                     name="email"
                     id="email"
                     autoComplete="email"
+                    className="inputField" 
                 />
                 <br/>
                 <InputText 
@@ -55,6 +59,7 @@ export default function GeneralInformation () {
                     name="phone"
                     id="phone"
                     autoComplete="phone"
+                    className="inputField" 
                 />
                 <br/>
                 <button 

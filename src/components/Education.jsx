@@ -35,7 +35,8 @@ export default function Education () {
 
     if (isFinalized) {
         return (
-            <div className="card">
+            <div className="card education">
+                <h1>Education</h1>
                 <h2>University: {university}</h2>
                 <h2>Field of Study: {fieldOfStudy}</h2>
                 <h2>Graduation Status: {graduationStatus === "graduated" ? "Graduated" : "Expected Graduation" }</h2>
@@ -51,7 +52,8 @@ export default function Education () {
         );
     } else {
         return (
-            <div className="card">
+            <div className="card education">
+                <h1>Education</h1>
                 <InputText 
                     label="University"
                     value={university}
@@ -59,6 +61,7 @@ export default function Education () {
                     placeholder="The University of Auckland"
                     name="university"
                     id="university"
+                    className="inputField" 
                 />
                 <br/>
                 <InputText 
@@ -68,6 +71,7 @@ export default function Education () {
                     placeholder="Engineering"
                     name="fieldOfStudy"
                     id="fieldOfStudy"
+                    className="inputField" 
                 />
                 <br/>
                 <SelectField
@@ -80,6 +84,7 @@ export default function Education () {
                     ]}
                     name="graduationStatus" 
                     id="graduationStatus"
+                    className="inputField selectField" 
                 />
                 <br/>
                 <InputText 
@@ -90,6 +95,7 @@ export default function Education () {
                     placeholder="2016-05"
                     name="graduationDate"
                     id="graduationDate"
+                    className="inputField" 
                 />
                 <br/>
                 <button 
