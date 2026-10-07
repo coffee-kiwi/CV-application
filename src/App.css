@@ -16,10 +16,19 @@ h2 {
 p,
 .inputField::placeholder {
   font-size: 1rem;
+  color: #828282;
+}
+
+.inputField.selectField,
+.inputLabel.inputField,
+#startDate,
+#endDate {
+  color: #828282;
 }
 
 .inputField {
   background-color: white;
+  color: #363636;
   border: #363636 1px solid;
   border-radius: 5px;
 }
