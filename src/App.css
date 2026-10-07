@@ -1,15 +1,27 @@
+.page {
+  background-color: lightgrey;
+  color: #363636;
+}
 
 h1 {
   font-size: 2rem;
+  color: #363636;
 }
 
 h2 {
   font-size: 1.3rem;
+  color: #363636;
 }
 
 p,
 .inputField::placeholder {
   font-size: 1rem;
+}
+
+.inputField {
+  background-color: white;
+  border: #363636 1px solid;
+  border-radius: 5px;
 }
 
 .card {
@@ -32,6 +44,9 @@ p,
   max-width: 500px;
   box-sizing: border-box;
 }
+.textArea textarea {
+  min-height: 200px;
+}
 
 .inputLabel input,
 .textArea textarea,
@@ -46,14 +61,6 @@ button {
   padding: 8px 16px;
 }
 
-
-/* .inputField.selectField {
-  margin-top: 8px;
-  display: block;
-} */
-
-
-/* .textArea textarea {
-  width: 150px;
-  width: 100%;
-} */
+.check {
+  accent-color: #999DA0;
+}

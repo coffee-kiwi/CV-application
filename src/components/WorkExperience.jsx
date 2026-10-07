@@ -94,6 +94,7 @@ export default function WorkExperience () {
                         type="checkbox"
                         checked={isCurrent}
                         onChange={(e) => setIsCurrent(e.target.checked)}
+                        className="check"
                     />
                     {' '}
                     Current

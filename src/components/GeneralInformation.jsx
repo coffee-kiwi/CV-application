@@ -43,7 +43,7 @@ export default function GeneralInformation () {
                     value={email}
                     onChange={setEmail}
                     type="email"
-                    placeholder="myemail@example.com"
+                    placeholder="email@example.com"
                     name="email"
                     id="email"
                     autoComplete="email"
